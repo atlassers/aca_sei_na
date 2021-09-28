@@ -1,25 +1,27 @@
-class RoomService {
+class ClientService {
     constructor() { }
 
 
     static getAll() {
-        BaseService.getAll('/rooms/v1')
+        BaseService.getAll('/clients/v1')
             .then(function (roomDtoList) {
                 var content = '<table class="aca-fill">';
                 content += '<tr>'
                     + '<th scope="col">Id</th>'
-                    + '<th scope="col">Denomination</th>'
-                    + '<th scope="col">Seats</th>'
-                    + '<th scope="col">3DProjector</th>'
+                    + '<th scope="col">Name</th>'
+                    + '<th scope="col">Surname</th>'
+                    + '<th scope="col">Birthdate</th>'
+                    + '<th scope="col">Subscription</th>'
                     + '<th scope="col">Delete Btn</th>'
                     + '<th scope="col">Detail Btn</th>'
                     + '</tr>';
                 jQuery.each(roomDtoList, function (i, val) {
                     content += '<tr>'
                         + '<td>' + val.idDto + '</td>'
-                        + '<td>' + val.roomDenomDto + '</td>'
-                        + '<td>' + val.numberOfSeatsDto + '</td>'
-                        + '<td>' + val.hasA3DProjectorDto + '</td>'
+                        + '<td>' + val.clientNameDto + '</td>'
+                        + '<td>' + val.clientSurnameDto + '</td>'
+                        + '<td>' + val.clientBirthDateDto + '</td>'
+                        + '<td>' + val.subscribedDto + '</td>'
                         + '<td><button id="btnDelete-' + val.idDto + '" class="btn btn-danger" onclick="RoomService.delete(' + val.idDto + ')">delete</button></td>'
                         + '<td><button id="btnDetail-' + val.idDto + '" class="btn btn-warning" onclick="RoomService.detail(' + val.idDto + ')">detail</button></td>'
                         + '</tr>';
@@ -28,20 +30,20 @@ class RoomService {
 
                 $('#saveForm').trigger('reset');
                 $('#saveForm').hide();
-                $('#roomsTable').empty();
-                $('#roomsTable').append(content);
-                $('#roomsTable').show();
+                $('#clientsTable').empty();
+                $('#clientsTable').append(content);
+                $('#clientsTable').show();
             });
     }
 
     static post(formData) {
-        BaseService.post(RoomService.path, formData)
-            .then(function (roomDto) {
-                window.alert("New Room Added")
+        BaseService.post(ClientService.path, formData)
+            .then(function (clientDto) {
+                window.alert("New Client Added")
                 $('#saveForm').trigger('reset');
                 $('#saveForm').hide();
 
-                RoomService.getAll();
+                ClientService.getAll();
             });
     }
 
@@ -79,7 +81,7 @@ class RoomService {
         }
 }
 
-RoomService.path = '/rooms/v1';
+RoomService.path = '/clients/v1';
 
 
 

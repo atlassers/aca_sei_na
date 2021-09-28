@@ -5,6 +5,7 @@ import it.euris.academy.cinema.data.model.Client;
 import it.euris.academy.cinema.exception.IdMustBeNullException;
 import it.euris.academy.cinema.exception.IdMustNotBeNullException;
 import it.euris.academy.cinema.repository.ClientRepository;
+import it.euris.academy.cinema.repository.projection.IClientsYoungerThan30;
 import it.euris.academy.cinema.service.ClientService;
 import java.text.ParseException;
 import java.util.List;
@@ -60,6 +61,11 @@ public class ClientServiceImpl implements ClientService {
     } else {
       return Boolean.FALSE;
     }
+  }
+
+  @Override
+  public List<IClientsYoungerThan30> listClientsYoungerThan30() {
+    return clientRepository.listClientsYoungerThan30();
   }
   //////////////////////////////////////////////////////////////////////////////////////////////////
 }

@@ -1,10 +1,10 @@
-class Room {
+class Client {
     constructor() { }
 
 static load () {
 
     $('#btnShow').click(function () {
-      RoomService.getAll();
+      ClientService.getAll();
     });
 
     $('#btnAdd').click(function () {
@@ -32,9 +32,9 @@ static load () {
         });
 
         if (id) {
-          RoomService.put(formDataId);
+          ClientService.put(formDataId);
         } else {
-          RoomService.post(formData);
+          ClientService.post(formData);
         }
     });
 }

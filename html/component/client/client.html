@@ -64,20 +64,26 @@
     <p class="card-text text-center">Everything is completely fine</p>
     <button id="btnShow" class="btn btn-primary">show</button>
     <button id="btnAdd" class="btn btn-secondary">add</button>
-    <div id="roomsTable" class="table mt-3"></div>
+    <div id="clientsTable" class="table mt-3"></div>
   </div>
   <form id="saveForm" class="saveForm">
     <div class="form-group">
-      <input id="idDto" class="form-control" type="text" name="roomId" placeholder="Room id">
+      <input id="clientId" class="form-control" type="text" name="clientId" placeholder="Client id">
     </div>
     <div class="form-group">
-      <input id="denomination" class="form-control" type="text" name="denomination" placeholder="Enter Room Denomination">
+      <input id="clientName" class="form-control" type="text" name="name" placeholder="Enter Client Name">
     </div>
     <div class="form-group">
-      <input id="seats" class="form-control" type="text" name="seats" placeholder="Enter Room Seats">
+      <input id="clientSurname" class="form-control" type="text" name="surname" placeholder="Enter Client Surname">
     </div>
     <div class="form-group">
-      <input id="btnSubmit" class="form-control btn btn-primary" type="submit" value="Save Room">
+      <input id="clientBirthDate" class="form-control" type="text" name="birthdate" placeholder="Enter Client Birthdate">
+    </div>
+    <div class="form-group">
+      <input id="clientSubscribedFlag" class="form-control" type="text" name="subscribed" placeholder="Enter Client Subscription Flag">
+    </div>
+    <div class="form-group">
+      <input id="btnSubmit" class="form-control btn btn-primary" type="submit" value="Save Client">
     </div>
   </form>
 </div>

@@ -29,12 +29,16 @@ module('script/index.js');
  */
 
 module('services/room-service.js');
+module('services/client-service.js');
+module('services/movie-service.js');
 
 
 /**
  * Components
  */
- module('component/room/room.js');
+module('component/room/room.js');
+module('component/client/client.js');
+module('component/movie/movie.js');
 
 
 

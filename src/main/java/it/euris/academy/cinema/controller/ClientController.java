@@ -2,6 +2,7 @@ package it.euris.academy.cinema.controller;
 
 import io.swagger.annotations.Api;
 import it.euris.academy.cinema.data.dto.ClientDto;
+import it.euris.academy.cinema.repository.projection.IClientsYoungerThan30;
 import it.euris.academy.cinema.service.ClientService;
 import java.text.ParseException;
 import java.util.List;
@@ -48,4 +49,9 @@ public class ClientController {
     return clientService.delete(id);
   }
   //////////////////////////////////////////////////////////////////////////////////////////////////
+
+  @GetMapping("/v1/queries")
+  public List<IClientsYoungerThan30> listClientsYoungerThan30() {
+    return clientService.listClientsYoungerThan30();
+  }
 }
