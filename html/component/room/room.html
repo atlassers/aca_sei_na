@@ -1,0 +1,83 @@
+
+<div class="card text-center aca-card">
+
+
+  <div class="card text-center">
+    <div class="h6">Total Deliveries By Courier</div>
+    <div class="card-body">
+      <button id="wtfOne" class="btn btn-primary">show</button>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <div id="tableWTFOne" class="table mt-3"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card text-center">
+    <div class="h6">Total Deliveries By Month & Courier</div>
+    <div class="card-body">
+
+      <button id="wtfTwo" class="btn btn-primary" data-toggle="collapse" href="#collapseExample">show</button>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+
+        <div id="tableWTFTwo" class="table mt-3"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card text-left">
+    <div class="card-body container py-1">
+      <div class="row">
+        <div class="card text-center shadow-lg m-2 col text-white bg-primary rounded">
+          <div class="card-body p-1">
+            <i class="bi bi-circle" style="font-size: 2rem;"></i>
+            <div id="totalCouriers" class="h3"></div>
+            <div class="h6">Total Couriers</div>
+          </div>
+        </div>
+
+        <div class="card text-center shadow-lg m-2 col text-white bg-success rounded">
+          <div class="card-body p-1">
+            <i class="bi bi-hand-thumbs-up" style="font-size: 2rem;"></i>
+            <div id="totalCouriersValid" class="h3"></div>
+            <div class="h6">Valid Couriers</div>
+          </div>
+        </div>
+
+        <div class="card text-center shadow-lg m-2 col text-white bg-danger rounded">
+          <div class="card-body p-1">
+            <i class="bi bi-hand-thumbs-down" style="font-size: 2rem;"></i>
+            <div id="totalCouriersNotValid" class="h3"></div>
+            <div class="h6">Invalid Couriers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class="card-img-top" src="https://i.kym-cdn.com/photos/images/newsfeed/001/401/347/312.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title text-center">Pls ignore the raging flames</h5>
+    <p class="card-text text-center">Everything is completely fine</p>
+    <button id="btnShow" class="btn btn-primary">show</button>
+    <button id="btnAdd" class="btn btn-secondary">add</button>
+    <div id="roomsTable" class="table mt-3"></div>
+  </div>
+  <form id="saveForm" class="saveForm">
+    <div class="form-group">
+      <input id="courierId" class="form-control" type="text" name="roomId" placeholder="Room id">
+    </div>
+    <div class="form-group">
+      <input id="denomination" class="form-control" type="text" name="denomination" placeholder="Enter Room Denomination">
+    </div>
+    <div class="form-group">
+      <input id="tax_code" class="form-control" type="text" name="seats" placeholder="Enter Room Seats">
+    </div>
+    <div class="form-group">
+      <input id="btnSubmit" class="form-control btn btn-primary" type="submit" value="Save Room">
+    </div>
+  </form>
+</div>
